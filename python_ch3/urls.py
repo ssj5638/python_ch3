@@ -19,5 +19,7 @@ from emaillist import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emaillist/',views.index)
+    path('emaillist/',views.index),
+    path('emaillist/form',views.form),
+    path('emaillist/add',views.add)
 ]
