@@ -8,10 +8,10 @@ from django.http import HttpResponseRedirect
 def index(request):
     emaillist_list = Emaillist.objects.all().order_by('id') #역순은 '-id'
     context = {'emaillist_list':emaillist_list}
-    return render(request, 'index.html',context)
+    return render(request, 'emaillist/index.html',context)
 
 def form(request):
-    return render(request, 'form.html')
+    return render(request, 'emaillist/form.html')
 
 def add(request):
     emaillist = Emaillist()

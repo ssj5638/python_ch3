@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from emaillist import views
+import emaillist.views as eview
+import guestbook.views as gview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emaillist/',views.index),
-    path('emaillist/form',views.form),
-    path('emaillist/add',views.add)
+    path('emaillist/', eview.index),
+    path('emaillist/form', eview.form),
+    path('emaillist/add', eview.add),
+    path('guestbook/', gview.index),
 ]
