@@ -20,8 +20,11 @@ import guestbook.views as gview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
     path('emaillist/', eview.index),
     path('emaillist/form', eview.form),
     path('emaillist/add', eview.add),
+
     path('guestbook/', gview.index),
+    path('guestbook/add', gview.add),
 ]
