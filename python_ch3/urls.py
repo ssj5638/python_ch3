@@ -27,4 +27,6 @@ urlpatterns = [
 
     path('guestbook/', gview.index),
     path('guestbook/add', gview.add),
+    path('guestbook/deleteform', gview.deleteform),
+    path('guestbook/delete', gview.delete)
 ]
